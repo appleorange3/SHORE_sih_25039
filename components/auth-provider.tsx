@@ -2,6 +2,7 @@
 
 import type React from "react"
 import { createContext, useContext, useEffect, useState } from "react"
+import Link from "next/link"
 
 export type UserRole = "citizen" | "official" | "analyst"
 

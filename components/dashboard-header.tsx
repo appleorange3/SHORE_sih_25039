@@ -81,19 +81,20 @@ export function DashboardHeader() {
             <LanguageSelector />
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="ghost" className="relative h-8 w-8 rounded-full">
+                <div className="relative h-8 w-8 rounded-full cursor-pointer">
                   <Avatar className="h-8 w-8">
                     <AvatarImage src={user?.avatar || "/placeholder.svg"} alt={user?.name} />
-                    <AvatarFallback>
-                      {user?.name
-                        ?.split(" ")
-                        .map((n) => n[0])
-                        .join("")
-                        .toUpperCase()}
-                    </AvatarFallback>
+                      <AvatarFallback>
+                        {user?.name
+                          ?.split(" ")
+                          .map((n) => n[0])
+                          .join("")
+                          .toUpperCase()}
+                      </AvatarFallback>
                   </Avatar>
-                </Button>
+                </div>
               </DropdownMenuTrigger>
+
               <DropdownMenuContent className="w-56" align="end" forceMount>
                 <DropdownMenuLabel className="font-normal">
                   <div className="flex flex-col space-y-1">
@@ -117,6 +118,7 @@ export function DashboardHeader() {
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
+
           </div>
         </div>
       </div>
