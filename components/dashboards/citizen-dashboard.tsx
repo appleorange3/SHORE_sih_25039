@@ -41,7 +41,6 @@ export function CitizenDashboard() {
       reportId: "HR-001232",
     },
   ])
-
   const [nearbyAlerts] = useState([
     {
       id: "1",
@@ -62,7 +61,6 @@ export function CitizenDashboard() {
   return (
     <div className="min-h-screen bg-background">
       <DashboardHeader />
-
       <main className="container mx-auto p-6 space-y-6">
         <div className="flex items-center justify-between">
           <div>
@@ -72,8 +70,7 @@ export function CitizenDashboard() {
           <Dialog open={showReportForm} onOpenChange={setShowReportForm}>
             <DialogTrigger asChild>
               <Button size="lg" className="gap-2">
-                <span className="text-lg">+</span>
-                Report Disaster
+                <span className="text-lg">+</span> Report Disaster
               </Button>
             </DialogTrigger>
             <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
@@ -81,7 +78,6 @@ export function CitizenDashboard() {
             </DialogContent>
           </Dialog>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
@@ -93,7 +89,6 @@ export function CitizenDashboard() {
               <p className="text-xs text-muted-foreground">+2 this month</p>
             </CardContent>
           </Card>
-
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium">Active Alerts</CardTitle>
@@ -104,7 +99,6 @@ export function CitizenDashboard() {
               <p className="text-xs text-muted-foreground">In your area</p>
             </CardContent>
           </Card>
-
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium">Community Impact</CardTitle>
@@ -116,7 +110,6 @@ export function CitizenDashboard() {
             </CardContent>
           </Card>
         </div>
-
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <Card>
             <CardHeader>
@@ -138,12 +131,10 @@ export function CitizenDashboard() {
                       </Badge>
                     </div>
                     <div className="flex items-center gap-1 text-sm text-muted-foreground">
-                      <span>📍</span>
-                      {report.location}
+                      <span>📍</span> {report.location}
                     </div>
                     <div className="flex items-center gap-1 text-xs text-muted-foreground">
-                      <span>🕒</span>
-                      {report.date} • ID: {report.reportId}
+                      <span>🕒</span> {report.date} • ID: {report.reportId}
                     </div>
                   </div>
                   <div className="flex items-center gap-2">
@@ -156,7 +147,6 @@ export function CitizenDashboard() {
               ))}
             </CardContent>
           </Card>
-
           <Card>
             <CardHeader>
               <CardTitle>Nearby Alerts</CardTitle>
@@ -177,12 +167,10 @@ export function CitizenDashboard() {
                       </Badge>
                     </div>
                     <div className="flex items-center gap-1 text-sm text-muted-foreground">
-                      <span>📍</span>
-                      {alert.location}
+                      <span>📍</span> {alert.location}
                     </div>
                     <div className="flex items-center gap-1 text-xs text-muted-foreground">
-                      <span>🕒</span>
-                      {alert.time}
+                      <span>🕒</span> {alert.time}
                     </div>
                   </div>
                   <Button size="sm" variant="outline">
@@ -193,7 +181,6 @@ export function CitizenDashboard() {
             </CardContent>
           </Card>
         </div>
-
         <Card>
           <CardHeader>
             <CardTitle>Quick Actions</CardTitle>
@@ -201,11 +188,7 @@ export function CitizenDashboard() {
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-              <Button
-                variant="outline"
-                className="h-20 flex-col gap-2 bg-transparent"
-                onClick={() => setShowReportForm(true)}
-              >
+              <Button variant="outline" className="h-20 flex-col gap-2 bg-transparent" onClick={() => setShowReportForm(true)}>
                 <span className="text-xl">📷</span>
                 <span className="text-xs">Report with Photo</span>
               </Button>
